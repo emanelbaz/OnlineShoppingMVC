@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h2>Orders</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@o.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@o.Total.ToString("N2")</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@o.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
