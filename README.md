@@ -55,11 +55,7 @@ OnlineShoppingMVC
 1. **Update DB connection** in `appsettings.json`  
 2. Run EF Core migrations:
 
-```powershell
-Add-Migration Init
-Update-Database
-
-Run the project
+3.Run the project
 
 Open /Identity/Account/Register to create a user
 
@@ -82,3 +78,8 @@ Admin dashboard for managing Products, Categories, Orders
 Pagination / Filtering on Products page
 
 Send email notification after placing an order
+
+
+  
+
+
